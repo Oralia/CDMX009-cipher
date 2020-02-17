@@ -1,5 +1,36 @@
-body {background-color: lightblue;};
+/*body{background-color: white}*/
+h1{
+  text-align: center;
+  color: #191970;
+  font-family: verdana;
+  font-size: 30px;
+  background-color: white;
+  margin: 50px 500px 50px 500px;
+}
 
-h2 {
-  color:red;
+body {
+  background-color: white;
+  background-image: url("compu.jpg");
+  background-position: auto;
+  background-repeat: no-repeat;
+  background-size: 1550px 850px;
+  margin: 50px 100PX;
+}
+
+
+#texto1{
+  border-style: solid;
+  border-color: white;
+  background-color: lightgrey;
+  border-radius: 5px;
+  margin: 250px 700px 0px 310px;
+
+}
+
+#texto2{
+  border-style: solid;
+  border-color: white;
+  background-color: lightgrey;
+  border-radius: 5px;
+
 }

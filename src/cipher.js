@@ -1,54 +1,60 @@
-const cipher ={code,decode};
-
+const cipher ={encode,decode}
+export default cipher;
 //inicia  la funcion
-function code(offset,word){
+//console.log(typeof word);
+function encode(offset,word){
+  // CON OR MANDA TYPE ERROR, SI NO INGRESAS NADA ,SI INGRESAS NUMERO O SI INGRESAS MINUSCULAS, PERO NO CIFRA
+//if ( typeof word !== 'string'| typeof offset !== 'number'){
+// CON AND CIFRA PERO NO MANDA TYPE ERROR CUANDO NO INGRESAS NADA, Y SI MANDA TYPE ERROR, SI INGRESAS NUMERO O SI INGRESAS MINUSCULAS
+//if ( typeof word !== 'string'&& typeof offset !== 'number'){
+  //throw new(TypeError);}
+//else  {
+  let wordEncode="";
   //inicia la funcion
-    for(let  j=0; j<word.length;j=j+1){
-      //Obtiene la posicion del primer caracter a cifrar en el codigo asc11
-      let i=word.charCodeAt(j);
+  for(let  j=0; j<word.length; j=j+1){
+    //Obtiene la posicion del primer caracter a cifrar en el codigo asc11
+    let i=word.charCodeAt(j);
+    //Para alfabeto en MAYUSCULAS
+  //if (i<65 |i>90 ){
+  //para caracteres especiales y el alfabeto en mayusculas y minusculas
+
       //Desplaza el caracter offset posiciones
-      i= (i-65+offset) %26+65;
-      //variable que guarda la palabra codificada
-
+      //Para alfabeto en MAYUSCULAS
+      //i= (i-65+ parseInt(offset)) %26+65;
+      i= (i+ parseInt(offset)) %255;
       //Guarda en una cadena el caracter desplazado (en codigo asc11)
-      let wordcode;
-      wordcode+= String.fromCodePoint(i);
-    }
-    console.log(word);
-    //imprime la palabra codificada
-    console.log(wordcode);
+      wordEncode+= String.fromCharCode(i);
+      //imprime la palabra codificada
 
+
+
+  }
+
+  return (wordEncode);
 }
-//imprime la funcion
-//console.log (code(offset,word));
 
-
-//texto a desplazar
-//let wordToDecode=document.getElementById("textdecode").value;
 
 function decode (offset,word){
-
   //variable que guarda la palabra codificada
-  let wordDecode='';
+  let wordDecode="";
 
   //inicia  la funcion
   for(let  j=0; j<word.length; j=j+1){
     //Obtiene la posicion en codigo asc11 del caracter
     let i=word.charCodeAt(j);
-    //Desplaza el caracter
-    i= (i+65-offset) %26+65;
+      //Para alfabeto en MAYUSCULAS
+    //if (i<65 |i>90 ){
+    //para caracteres especiales y el alfabeto en mayusculas y minusculas
+
+    //Desplaza el caracter solo de letras mayusculas
+  //  i= (i+65-parseInt(offset)) %26+65;
+    //Desplaza cualquier caracter
+  i= (i-parseInt(offset)) %255;
+
     //Guarda en una cadena el caracter desplazado (en codigo asc11)
-    wordDecode += String.fromCodePoint(i);
+    wordDecode += String.fromCharCode(i);
   }
 
   //imprime la palabra codificada
-console.log(wordDecode);
+  return (wordDecode);
 }
-//imprime la funcion
-//console.log (decode(offset,word));
-
-//export default decode;
-//____________________________
-
-
-export default cipher;

@@ -1,17 +1,21 @@
-//variable que toma el valor a desplazar
-let offset= parseInt(document.getElementById("offset").value);
-//texto a cifrar
-let word=document.getElementById("texto").value;
-
 import cipher from './cipher.js';
-console.log(cipher);
+//texto a cifrar
 
-function cCode() {
-  let textCode=cipher.code(offset.value, word.value);
-  document.getElementById("textcode").innerHTML = textCode;
-};
+let offset= document.getElementById("offset");
+let word=document.getElementById("texto");
+//variable que toma el valor a desplazar
+
+
+
+function cEncode() {
+  let textEncode=cipher.encode( offset.value,word.value);
+  document.getElementById("texto1").innerText=textEncode;
+}
 
 function cDecode() {
-  let textCode=cipher.decode(offset.value,word.value);
-  document.getElementById("textcode").innerHTML = textCode;
-};
+  let textDecode=cipher.decode(offset.value,word.value);
+  document.getElementById("texto2").innerText=textDecode;
+}
+
+document.getElementById("Cifrar").addEventListener("click",cEncode);
+document.getElementById("Descifrar").addEventListener("click",cDecode);
