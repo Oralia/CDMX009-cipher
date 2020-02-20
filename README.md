@@ -1,11 +1,16 @@
-#Secret Message
+##Secret Message
+
 Resumen: Secret Message es una aplicación pensada en niñ@s, donde se podrán enviar mensajes cifrados
 
-#Investigación UX
+##Investigación UX
+
 Los usuarios de la app son niños de primaria, el objetivo es que se puedan mandar mensajes secretos con motivo de San Valentín.
 Los niños al ingresar a la ingresar a la aplicación ingresaran su nombre su edad (que sera tomada como offset) y podrán crear un mensaje (cifrar) u obtener un mensaje ( decifrar)
 Las mejoras para la aplicación: es que se puedan guardar los mensajes enviados para que los niños al ingresar busquen su nombre y puedan visualizar si tienen algún de mensaje en su buzón.
+
 ![imagen Prototipo](src/Prototipo.png)
+
+
 # Cifrado César
 
 ## Índice

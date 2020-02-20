@@ -1,28 +1,31 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Caesar Cipher</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root">
-      <h1>Secret Message</h1>
-    </div>
-    <script src="index.js" type="module"> </script>
-    <h2>Hello</h2>
+<head>
+  <meta charset="utf-8">
+  <title>Caesar Cipher</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <script src="index.js" type="module"> </script>
+
+  <div id="root">
+    <h1>Secret Message</h1>
+
+    <h2 id="datos">Hello</h2>
     <P>What's your name? </P>
     <input type="text" id="name"/>
     <P>How old are you? </P>
     <input type="text" id="offset"/>
-    <button id="Cifrar">Create a message </button>
+    <br>
+  </div>
+  <article id="mensaje">
     <input type="text" id="texto"/>
-
-
+    <button id="Cifrar">Create a message </button>
 
     <button id="Descifrar"> Find a message </button>
     <br>
     <p id="texto1"> </p>
     <p id="texto2"> </p>
-  </body>
+  </article>
+</body>
 </html>
