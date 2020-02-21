@@ -1,11 +1,23 @@
+#data,#message{display:none }
+.button1{
+  background-color: #f44336;
+  font-size: 60px;
+  font-family: Arial;
+  border-radius: 4px;
+  transition-duration:0.05s;
+  color: #ffffff;
+  margin: 35px 20px 50px 600px;
+
+}
+
 
 h1{
   text-align: center;
-  color: #191970;
-  font-family: verdana;
-  font-size: 30px;
-  background-color: white;
-  margin: 50px 500px 50px 500px;
+  color: #FFFFFF;
+  font-family: Arial;
+  font-size: 70px;
+  margin: 350px 200px 50px 200px;
+  font-style: 2px solid #0E374e;
 }
 
 body {
@@ -16,20 +28,27 @@ body {
   margin: 50px 100px;
 }
 
+.screen2{
+  font-family: Arial;
+  text-align: center;
+  background-color: white;
+  font-size: 20px;
+  margin: 450px 400px 50px 400px;
+}
 
 #texto1{
-  /*border-style: solid;
+  border-style: solid;
   border-color: white;
   background-color: lightgrey;
-  border-radius: 5px;*/
+  border-radius: 5px;
   margin: 150px 700px 0px 310px;
 
 }
 
 #texto2{
-  /*border-style: solid;
+  border-style: solid;
   border-color: white;
   background-color: lightgrey;
-  border-radius: 5px;*/
+  border-radius: 5px;
   margin: 0px 700px 0px 810px;
 }
